@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/build.js": { "maxDuration": 20, "memory": 1024 },
+    "api/upload.js": { "maxDuration": 20 }
+  },
+  "headers": [
+    { "source": "/api/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store" }] },
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }] }
+  ]
+}
